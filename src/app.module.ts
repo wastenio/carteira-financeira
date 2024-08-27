@@ -11,7 +11,7 @@ import { UserController } from './user/user.controller';
       host: 'aws-0-us-west-1.pooler.supabase.com', // ou a URL do seu banco de dados Supabase
       port: 5432,
       username: 'postgres.cqhkeyenbhwswarzfqbf',
-      password: 'NAtyDudA2023',
+      password: 'MINHA_SENHA_AQUI',
       database: 'carteiradigital',
       entities: [User],
       synchronize: false, // Apenas para desenvolvimento. Não use em produção.

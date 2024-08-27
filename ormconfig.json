@@ -3,7 +3,7 @@
     "host": "aws-0-us-west-1.pooler.supabase.com",
     "port": 5432,
     "username": "postgres.cqhkeyenbhwswarzfqbf",
-    "password": "NAtyDudA2023",
+    "password": "MINHA_SENHA_AQUI",
     "database": "carteiradigital",
     "entities": ["src/**/*.entity{.ts,.js}"],
     "synchronize": true,
