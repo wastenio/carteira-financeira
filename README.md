@@ -46,3 +46,6 @@ Esse projeto foi desenvolvido com  base em um desafio tecnico, onde no projeto f
 3. Instale as dependências: `npm install -f`
 
 
+### Observações
+- Deve ser criado um arquivo chamado ormconfig.json dentro da raiz do projeto contendo as informações de acesso ao banco de dados.
+- Deve ser criado um arquivo chamado app.module.ts dentro da pasta "src" contendo as configurações iguais as do arquivo ormconfig, para que possa ser realizado a conexao com o bando de dados.
