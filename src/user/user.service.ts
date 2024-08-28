@@ -49,7 +49,7 @@ export class UserService {
     }
 
     // Verifica se o remetente tem saldo suficiente
-    if (sender.balance != amount) {
+    if (sender.balance < amount) {
       throw new BadRequestException('Saldo insuficiente.');
     }
 
