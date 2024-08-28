@@ -25,21 +25,31 @@ Para o banco de dados, estou usando conexoes com o supabase, onde irá ser salvo
 
 ` npm run start:dev`
 
+![Comando para rodar o projeto](./assets/print/comando_rodar_projeto.jpg)
+
 2. Para realizar o cadastro de usuario:
 - Via postman acessar a url abaixo passando os parametro de email, password e amount via metodo json no BODY do postman:
 
 `http://localhost:3000/users/register`
+
+![criando usuario via postman](./assets/print/cadastrando_usuario.jpg)
 
 3. Para realizar transferencias de saldo:
 - Via postman acessar a url abaixo passando os parametro de email e amount via metodo json no BODY do postman:
 
 `http://localhost:3000/users/transfer`
 
+![Realizando transferencia de saldo insuficiente via postman](./assets/print/transacao_valor_insuficiente.jpg)
+
+![Realizando transferencia de saldo positivo](./assets/print/realizando_transferencia_de_valor_positivo.jpg)
+
 4. Para realizar atualização de saldo:
 
 - Via postman acessar a url abaixo passando os parametro de email e amount via metodo json no BODY do postman:
 
 `http://localhost:3000/users/update-balance/id`
+
+![Realizando atualização de saldo](./assets/print/atualizando_saldo.jpg)
 
 
 ## Tecnologias utilizadas
