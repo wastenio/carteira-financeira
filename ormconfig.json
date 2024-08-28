@@ -1,12 +1,12 @@
 {
     "type": "postgres",
     "host": "aws-0-us-west-1.pooler.supabase.com",
-    "port": 5432,
+    "port": 6543,
     "username": "postgres.cqhkeyenbhwswarzfqbf",
-    "password": "MINHA_SENHA_AQUI",
-    "database": "carteiradigital",
+    "password": "NAtyDudA2020",
+    "database": "postgres",
     "entities": ["src/**/*.entity{.ts,.js}"],
     "synchronize": true,
-    "logging": false
+    "logging": true
   }
   

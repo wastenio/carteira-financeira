@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/user.entity';
+import { Transaction } from './transaction/transaction.entity'; // Importe a entidade Transaction
 import { UserService } from './user/user.service';
 import { UserController } from './user/user.controller';
 
@@ -8,15 +9,16 @@ import { UserController } from './user/user.controller';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'aws-0-us-west-1.pooler.supabase.com', // ou a URL do seu banco de dados Supabase
-      port: 5432,
+      host: 'aws-0-us-west-1.pooler.supabase.com',
+      port: 6543,
       username: 'postgres.cqhkeyenbhwswarzfqbf',
-      password: 'MINHA_SENHA_AQUI',
-      database: 'carteiradigital',
-      entities: [User],
-      synchronize: false, // Apenas para desenvolvimento. Não use em produção.
+      password: 'NAtyDudA2020',
+      database: 'postgres',
+      entities: [User, Transaction],
+      synchronize: true,
+      logging: true,
     }),
-    TypeOrmModule.forFeature([User]), // Importando o módulo do User
+    TypeOrmModule.forFeature([User, Transaction]),
   ],
   controllers: [UserController],
   providers: [UserService],
