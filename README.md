@@ -17,18 +17,25 @@ Esse projeto foi desenvolvido com  base em um desafio tecnico, onde no projeto f
 - Realização de transferencias de saldos.
 - Atualização de saldo bancario.
 
+Para o banco de dados, estou usando conexoes com o supabase, onde irá ser salvo o cadastro do usuario e todas as suas transações.
+
 ## Funcionalidades
-1. Para realizar o cadastro de usuario:
+
+1. para rodar o projeto executar o comando abaixo:
+
+` npm run start:dev`
+
+2. Para realizar o cadastro de usuario:
 - Via postman acessar a url abaixo passando os parametro de email, password e amount via metodo json no BODY do postman:
 
 `http://localhost:3000/users/register`
 
-2. Para realizar transferencias de saldo:
+3. Para realizar transferencias de saldo:
 - Via postman acessar a url abaixo passando os parametro de email e amount via metodo json no BODY do postman:
 
 `http://localhost:3000/users/transfer`
 
-3. Para realizar atualização de saldo:
+4. Para realizar atualização de saldo:
 
 - Via postman acessar a url abaixo passando os parametro de email e amount via metodo json no BODY do postman:
 
@@ -47,5 +54,50 @@ Esse projeto foi desenvolvido com  base em um desafio tecnico, onde no projeto f
 
 
 ### Observações
-- Deve ser criado um arquivo chamado ormconfig.json dentro da raiz do projeto contendo as informações de acesso ao banco de dados.
-- Deve ser criado um arquivo chamado app.module.ts dentro da pasta "src" contendo as configurações iguais as do arquivo ormconfig, para que possa ser realizado a conexao com o bando de dados.
+1. Deve ser criado um arquivo chamado ormconfig.json dentro da raiz do projeto contendo as informações de acesso ao banco de dados.
+
+-o arquivo ormconfig.json deve conter as informações abaixo no formato json:
+
+    "type": "Tipo_Do_Banco",
+
+    "host": "HOST_DO_BANCO",
+
+    "port": PORTA_DE_CONEXAO_BANCO_DE_DADOS,
+
+    "username": "USUARIO_BANCO_DADOS",
+
+    "password": "SENHA_BANCO_DADOS",
+
+    "database": "NOME_BANCO_DADOS",
+
+    "entities": ["src/**/*.entity{.ts,.js}"],
+
+    "synchronize": true,
+
+    "logging": true
+
+
+2. Deve ser criado um arquivo chamado app.module.ts dentro da pasta "src" contendo as configurações iguais as do arquivo ormconfig, para que possa ser realizado a conexao com o bando de dados.
+
+- o arquivo app.module.ts deve conter as informações abaixo:
+
+TypeOrmModule.forRoot({
+
+      type: 'Tipo_Do_Banco',
+
+      host: 'HOST_DO_BANCO',
+
+      port: PORTA_DE_CONEXAO_BANCO_DE_DADOS,
+
+      username: 'USUARIO_BANCO_DADOS',
+
+      password: 'SENHA_BANCO_DADOS',
+
+      database: 'NOME_BANCO_DADOS',
+      
+      entities: [User, Transaction],
+
+      synchronize: true,
+
+      logging: true,
+    })
